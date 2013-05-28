@@ -3,9 +3,9 @@ package com.zrp.core;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executor;
 
+import com.zrp.cache.disc.naming.FileNameGenerator;
+import com.zrp.cache.disc.naming.HashCodeFileNameGenerator;
 import com.zrp.core.assist.QueueProcessingType;
-import com.zrp.core.disc.naming.FileNameGenerator;
-import com.zrp.core.disc.naming.HashCodeFileNameGenerator;
 
 public class DefaultConfigurationFactory {
 
