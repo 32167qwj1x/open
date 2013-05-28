@@ -13,7 +13,16 @@ public class DiscCacheUtil {
 	
 	public static File findInCache(String imageUri,DiscCacheAware discCache)
 	{
-		
+		File image =discCache.get(imageUri);
+		return image.exists() ? image : null;
 	}
+	
+	
+	public static boolean removeFromCache(String imageUri,DiscCacheAware discCache)
+	{
+		File image = discCache.get(imageUri);
+		return image.delete();
+	}
+	
 	
 }
