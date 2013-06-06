@@ -16,7 +16,6 @@ public class FuzzyKeyMemoryCache<K,V> implements MemoryCacheAware<K, V> {
 		this.keyComparator = keyComparator;
 	}
 	
-	@Override
 	public boolean put(K key, V value) {
 		// TODO Auto-generated method stub
 		synchronized (cache) {
@@ -37,22 +36,18 @@ public class FuzzyKeyMemoryCache<K,V> implements MemoryCacheAware<K, V> {
 		return cache.put(key, value);
 	}
 
-	@Override
 	public V get(K key) {
 		return cache.get(key);
 	}
 
-	@Override
 	public void remove(K key) {
 		cache.remove(key);
 	}
 
-	@Override
 	public Collection<K> keys() {
 		return cache.keys();
 	}
 
-	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
 		cache.clear();

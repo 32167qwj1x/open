@@ -58,14 +58,12 @@ public class LimitedAgeDiscCache extends BaseDiscCache {
 		this.maxFileAge = maxAge * 1000; // to milliseconds
 	}
 
-	@Override
 	public void put(String key, File file) {
 		long currentTime = System.currentTimeMillis();
 		file.setLastModified(currentTime);
 		loadingDates.put(file, currentTime);
 	}
 
-	@Override
 	public File get(String key) {
 		File file = super.get(key);
 		if (file.exists()) {

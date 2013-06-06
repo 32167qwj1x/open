@@ -43,7 +43,6 @@ public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 	 * Returns the Bitmap for {@code key} if it exists in the cache. If a Bitmap was returned, it is moved to the head
 	 * of the queue. This returns null if a Bitmap is not cached.
 	 */
-	@Override
 	public final Bitmap get(String key) {
 		if (key == null) {
 			throw new NullPointerException("key == null");
@@ -57,7 +56,6 @@ public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 	/**
 	 * Caches {@code Bitmap} for {@code key}. The Bitmap is moved to the head of the queue.
 	 */
-	@Override
 	public final boolean put(String key, Bitmap value) {
 		if (key == null || value == null) {
 			throw new NullPointerException("key == null || value == null");
@@ -106,7 +104,6 @@ public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 	}
 
 	/** Removes the entry for {@code key} if it exists. */
-	@Override
 	public final void remove(String key) {
 		if (key == null) {
 			throw new NullPointerException("key == null");
@@ -120,12 +117,10 @@ public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 		}
 	}
 
-	@Override
 	public Collection<String> keys() {
 		return new HashSet<String>(map.keySet());
 	}
 
-	@Override
 	public void clear() {
 		trimToSize(-1); // -1 will evict 0-sized elements
 	}

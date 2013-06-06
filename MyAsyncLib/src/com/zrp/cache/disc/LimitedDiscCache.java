@@ -33,7 +33,6 @@ public abstract  class LimitedDiscCache extends BaseDiscCache {
 	{
 		new Thread(new Runnable() {
 			
-			@Override
 			public void run() {
 				// TODO Auto-generated method stub
 				int size = 0;
@@ -51,7 +50,6 @@ public abstract  class LimitedDiscCache extends BaseDiscCache {
 		}).start();
 	}
 	
-	@Override
 	public void put(String key, File file) {
 		// TODO Auto-generated method stub
 		int valueSize =getSize(file);
@@ -68,7 +66,6 @@ public abstract  class LimitedDiscCache extends BaseDiscCache {
 		lastUsageDates.put(file, currentTime);
 	}
 
-	@Override
 	public File get(String key) {
 		File file = super.get(key);
 

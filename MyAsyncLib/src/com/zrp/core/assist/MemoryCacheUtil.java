@@ -27,7 +27,6 @@ public class MemoryCacheUtil {
 	{
 		return new Comparator<String>(){
 
-			@Override
 			public int compare(String key1, String key2) {
 				String imageUri1 = key1.substring(0, key1.lastIndexOf(URI_AND_SIZE_SEPARATOR));
 				String imageUri2 = key2.substring(0, key2.lastIndexOf(URI_AND_SIZE_SEPARATOR));

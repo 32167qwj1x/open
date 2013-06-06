@@ -1,5 +1,10 @@
 package com.zrp.core.assist;
 
+/**
+ * Present width and height values
+ * @author wj
+ *
+ */
 public class ImageSize {
 
 	private static final int TO_STRING_MAX_LENGHT = 9;
@@ -34,11 +39,21 @@ public class ImageSize {
 		return height;
 	}
 	
+	/**
+	 * Scales down dimensions in <b>sampleSize</b> times. Returns new object.
+	 * @param sampleSize
+	 * @return
+	 */
 	public ImageSize scaleDown(int sampleSize)
 	{
 		return new ImageSize(width / sampleSize, height / sampleSize);
 	}
 	
+	/**
+	 * Scales dimensions according to incoming scale. Returns new object
+	 * @param scale
+	 * @return
+	 */
 	public ImageSize scale(float scale){
 		return new ImageSize((int)(width * scale),(int)(height * scale));
 	}

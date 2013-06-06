@@ -12,7 +12,6 @@ public class MD5FileNameGenerator implements FileNameGenerator{
 	private static final String HASH_ALGORITHM="MD5";
 	private static final int RADIX = 10+ 26;  // 10 Êý×Ö + 26×ÖÄ¸
 	
-	@Override
 	public String generate(String imageUri) {
 		// TODO Auto-generated method stub
 		byte[] md5 = getMD5(imageUri.getBytes());

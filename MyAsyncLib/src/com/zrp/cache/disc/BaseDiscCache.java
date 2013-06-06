@@ -35,14 +35,12 @@ public abstract class BaseDiscCache implements DiscCacheAware{
 	}
 
 
-	@Override
 	public File get(String key) {
 		// TODO Auto-generated method stub
 		String name = fileNameGenerator.generate(key);
 		return new File(cacheDir,name);
 	}
 
-	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
 		File[] files =  cacheDir.listFiles();

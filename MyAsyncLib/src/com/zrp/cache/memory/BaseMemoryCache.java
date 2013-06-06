@@ -11,13 +11,11 @@ public abstract class BaseMemoryCache<K,V> implements MemoryCacheAware<K, V>{
 
 	private final Map<K,Reference<V>> softMap = Collections.synchronizedMap(new HashMap<K, Reference<V>>());
 
-	@Override
 	public boolean put(K key, V value) {
 		softMap.put(key,createReference(value));
 		return true;
 	}
 
-	@Override
 	public V get(K key) {
 		// TODO Auto-generated method stub
 		V result = null;
@@ -29,13 +27,11 @@ public abstract class BaseMemoryCache<K,V> implements MemoryCacheAware<K, V>{
 		return result;
 	}
 
-	@Override
 	public void remove(K key) {
 		// TODO Auto-generated method stub
 		softMap.remove(key);
 	}
 
-	@Override
 	public Collection<K> keys() {
 		// TODO Auto-generated method stub
 		synchronized (softMap) {
@@ -43,7 +39,6 @@ public abstract class BaseMemoryCache<K,V> implements MemoryCacheAware<K, V>{
 		}
 	}
 
-	@Override
 	public void clear() {
 		softMap.clear();
 	}
