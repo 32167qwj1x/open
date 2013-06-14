@@ -1,5 +1,8 @@
 package com.zrp.core.decode;
 
+import android.graphics.BitmapFactory.Options;
+
+import com.zrp.core.assist.ImageScaleType;
 import com.zrp.core.assist.ImageSize;
 import com.zrp.core.assist.ViewScaleType;
 
@@ -17,5 +20,14 @@ public class ImageDecodingInfo {
 	private final ImageScaleType imageScaleType;
 	private final ViewScaleType viewScaleType;
 	
-	private final 
+	private final Options decodingOptions;
+	
+	public ImageDecidingInfo(String imageKey, String imageUri, ImageSize targetSize, ViewScaleType viewScaleType, ImageDownloader downloader, DisplayImageOptions displayOptions){
+		this.imageKey = imageKey;
+		this.imageUri = imageUri;
+		this.targetSize = targetSize;
+		
+		this.imageScaleType = displayOptions.get
+		
+	}
 }
