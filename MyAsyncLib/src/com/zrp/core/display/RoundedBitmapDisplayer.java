@@ -30,7 +30,6 @@ public class RoundedBitmapDisplayer implements BitmapDisplayer {
 		 this.roundPixels = roundPixels;
 	}
 	
-	@Override
 	public Bitmap display(Bitmap bitmap, ImageView imageView) {
 		Bitmap roundedBitmap = roundCorners(bitmap, imageView, roundPixels);
 		imageView.setImageBitmap(roundedBitmap);

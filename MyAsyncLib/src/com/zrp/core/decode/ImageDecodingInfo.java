@@ -27,7 +27,7 @@ public class ImageDecodingInfo {
 		this.imageUri = imageUri;
 		this.targetSize = targetSize;
 		
-		this.imageScaleType = displayOptions.get
+		this.imageScaleType = displayOptions.getIma
 		
 	}
 }
